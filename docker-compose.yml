@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  mongodb:
+    ports:
+      - ${MONGODB_PORT}:27017
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    container_name: mongodb
+    environment:
+      - MONGODB_INITDB_ROOT_DATABASE=${MONGODB_DATABASE}
+      - MONGODB_INITDB_ROOT_USERNAME=${MONGODB_USERNAME}
+      - MONGODB_INITDB_ROOT_PASSWORD=${MONGODB_PASSWORD}
+    volumes:
+      - /data/db

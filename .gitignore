@@ -1,0 +1,8 @@
+.idea
+.vscode
+.bin
+config.yml
+project
+data
+tmp
+logs
